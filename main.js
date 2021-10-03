@@ -20,9 +20,9 @@ camera.position.setX(-3);
 renderer.render(scene, camera);
 
 // Torus
-const torusTexture = new THREE.TextureLoader().load('/images/torus.jpg?nf_resize=fit&w=300&h=400');
-const torusNormalTexture = new THREE.TextureLoader().load('/images/torus_map.jpg?nf_resize=fit&w=300&h=400');
-const torusDispTexture = new THREE.TextureLoader().load('/images/torus_disp.jpg?nf_resize=fit&w=300&h=400');
+const torusTexture = new THREE.TextureLoader().load('/images/torus.jpg');
+const torusNormalTexture = new THREE.TextureLoader().load('/images/torus_map.jpg');
+const torusDispTexture = new THREE.TextureLoader().load('/images/torus_disp.jpg');
 const geometry = new THREE.TorusGeometry(10, 3, 16, 100);
 const material = new THREE.MeshBasicMaterial({ map: torusTexture, normalMap: torusNormalTexture, specularMap: torusDispTexture});
 const torus = new THREE.Mesh(geometry, material);
@@ -62,12 +62,12 @@ Array(200).fill().forEach(addStar);
 
 // Background
 
-const spaceTexture = new THREE.TextureLoader().load('/images/space1.jpg?nf_resize=fit&w=300&h=400');
+const spaceTexture = new THREE.TextureLoader().load('/images/space1.jpg');
 scene.background = spaceTexture;
 
 // Avatar
 
-const myPicture = new THREE.TextureLoader().load('/images/me.jpg?nf_resize=fit&w=300&h=400');
+const myPicture = new THREE.TextureLoader().load('/images/me.jpg');
 
 const me = new THREE.Mesh(new THREE.BoxGeometry(3, 3, 3), new THREE.MeshBasicMaterial({ map: myPicture }));
 
@@ -75,8 +75,8 @@ scene.add(me);
 
 // Moon
 
-const moonTexture = new THREE.TextureLoader().load('/images/moon.jpg?nf_resize=fit&w=300&h=400');
-const normalTexture = new THREE.TextureLoader().load('/images/normal.jpg?nf_resize=fit&w=300&h=400');
+const moonTexture = new THREE.TextureLoader().load('/images/moon.jpg');
+const normalTexture = new THREE.TextureLoader().load('/images/normal.jpg');
 
 const moon = new THREE.Mesh(
   new THREE.SphereGeometry(3, 32, 32),
@@ -88,8 +88,8 @@ const moon = new THREE.Mesh(
 
 // Earth
 
-const earthTexture = new THREE.TextureLoader().load('/images/earth.jpg?nf_resize=fit&w=300&h=400');
-const earthNormalTexture = new THREE.TextureLoader().load('/images/dunya-normal.jpg?nf_resize=fit&w=300&h=400');
+const earthTexture = new THREE.TextureLoader().load('/images/earth.jpg');
+const earthNormalTexture = new THREE.TextureLoader().load('/images/dunya-normal.jpg');
 
 const earth = new THREE.Mesh(
   new THREE.SphereGeometry(3,32,32),
