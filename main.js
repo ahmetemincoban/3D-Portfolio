@@ -62,12 +62,12 @@ Array(200).fill().forEach(addStar);
 
 // Background
 
-const spaceTexture = new THREE.TextureLoader().load('/images/space1.jpg');
+const spaceTexture = new THREE.TextureLoader().load('/src/images/space1.jpg');
 scene.background = spaceTexture;
 
 // Avatar
 
-const myPicture = new THREE.TextureLoader().load('/images/me.jpg');
+const myPicture = new THREE.TextureLoader().load('/src/images/me.jpg');
 
 const me = new THREE.Mesh(new THREE.BoxGeometry(3, 3, 3), new THREE.MeshBasicMaterial({ map: myPicture }));
 
@@ -75,8 +75,8 @@ scene.add(me);
 
 // Moon
 
-const moonTexture = new THREE.TextureLoader().load('/images/moon.jpg');
-const normalTexture = new THREE.TextureLoader().load('/images/normal.jpg');
+const moonTexture = new THREE.TextureLoader().load('/src/images/moon.jpg');
+const normalTexture = new THREE.TextureLoader().load('/src/images/normal.jpg');
 
 const moon = new THREE.Mesh(
   new THREE.SphereGeometry(3, 32, 32),
@@ -88,8 +88,8 @@ const moon = new THREE.Mesh(
 
 // Earth
 
-const earthTexture = new THREE.TextureLoader().load('/images/earth.jpg');
-const earthNormalTexture = new THREE.TextureLoader().load('/images/dunya-normal.jpg');
+const earthTexture = new THREE.TextureLoader().load('/src/images/earth.jpg');
+const earthNormalTexture = new THREE.TextureLoader().load('/src/images/dunya-normal.jpg');
 
 const earth = new THREE.Mesh(
   new THREE.SphereGeometry(3,32,32),
